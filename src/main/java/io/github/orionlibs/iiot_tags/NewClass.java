@@ -1,7 +1,5 @@
-package io.github.orionlibs.project_name;
+package io.github.orionlibs.iiot_tags;
 
-import io.github.orionlibs.project_name.config.ConfigurationService;
-import io.github.orionlibs.project_name.config.OrionConfiguration;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.logging.Handler;
@@ -12,17 +10,10 @@ import lombok.NoArgsConstructor;
 public class NewClass
 {
     private final static Logger log;
-    private OrionConfiguration featureConfiguration;
 
     static
     {
         log = Logger.getLogger(NewClass.class.getName());
-    }
-
-    public NewClass(final Properties customConfig) throws IOException
-    {
-        this.featureConfiguration = OrionConfiguration.loadFeatureConfiguration(customConfig);
-        ConfigurationService.registerConfiguration(featureConfiguration);
     }
 
 
